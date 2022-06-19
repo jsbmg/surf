@@ -5,11 +5,11 @@ import NavBar from './NavBar';
 
 function App() {
   return (
-    <div className="App bg-hero-pattern bg-black h-screen">
+    <div className="App bg-white text-black">
       <NavBar />
       {/*
-      <Search />
-      <Dashboard />
+      <Map />
+      <Forecast />
       */}
     </div>
   )
