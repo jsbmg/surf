@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="surf" id="Project-366" database="PostgreSQL" >
+	<schema name="surf" >
+		<table name="locations" >
+			<column name="id" type="integer" jt="4" mandatory="y" />
+			<column name="name" type="varchar" length="100" jt="12" mandatory="y" />
+			<column name="latitude" type="double precision" jt="3" mandatory="y" />
+			<column name="longitude" type="double precision" jt="3" mandatory="y" />
+			<index name="pk_locations" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+		</table>
+	</schema>
+	<layout name="Default Layout" id="Layout-742" show_relation="columns" >
+		<entity schema="surf" name="locations" color="C1D8EE" x="48" y="48" />
+	</layout>
+</project>
