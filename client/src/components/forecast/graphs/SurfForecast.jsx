@@ -31,6 +31,7 @@ function SurfForecast({currentLocation}) {
       <h2 className="font-bold pt-4">Forecast</h2>
       <XYPlot height={300} width={800} xType="ordinal">
         <XAxis
+          tickTotal={0}
           tickFormat={t => {
             if (new Date().getHours() === new Date(t).getHours()) {
               return formatDate(t);

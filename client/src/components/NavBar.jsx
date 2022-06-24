@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const linkStyle = "m-auto cursor-pointer hover:text-darkblue";
 const navStyle = `bg-turquoise text-mywhite bg-opacity-90  flex flex-col md:flex-row
@@ -9,6 +9,7 @@ const navStyle = `bg-turquoise text-mywhite bg-opacity-90  flex flex-col md:flex
 import Search from './Search';
 
 function NavBar({locations, changeLocation}) {
+
   return (
     <div className={navStyle}>
       <div className="flex flex-col md:flex-row gap-4 inline-flex items-center">

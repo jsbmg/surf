@@ -46,8 +46,8 @@ function Forecast({locations}) {
       <div className='forecast-elements'>
         <div className='flex flex-col w-full justify-center'>
           <div className='flex flex-row justify-center'>
-            <Weather weather={weather} currentLocation={currentLocation} />
             <Surf currentLocation={currentLocation} />
+            <Weather weather={weather} currentLocation={currentLocation} />
           </div>
           <SurfHeight currentLocation={currentLocation} />
           <SurfForecast currentLocation={currentLocation} />

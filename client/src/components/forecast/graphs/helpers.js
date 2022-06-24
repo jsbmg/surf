@@ -1,4 +1,3 @@
-
 const todaysDate = new Date();
 
 const formatTime = (date) => {

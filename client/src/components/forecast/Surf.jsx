@@ -29,6 +29,7 @@ function Surf ({currentLocation}) {
           size={"24px"}
           value={currentSwell.surf.optimalScore}
           color2={'#114488'}
+          edit={false}
         />
       </div>
     </div>

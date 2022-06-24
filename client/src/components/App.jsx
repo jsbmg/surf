@@ -7,7 +7,7 @@ import Forecast from './forecast/Forecast';
 import Map from './Map';
 import NavBar from './NavBar';
 import Placeholder from './Placeholder';
-import NoSelection from './forecast/NoSelection';
+import EmptyForecast from './forecast/EmptyForecast';
 
 function App() {
   const [locations, setLocations] = useState([]);
@@ -15,7 +15,7 @@ function App() {
   const [currentLocation, setCurrentLocation] = useState(null);
   const [startingCoords, setStartingCoords] = useState([32.7, -117.16]);
 
-  const changeLocation = (location) => {
+  const changeLocation = (location, route) => {
     setCurrentLocation(location);
   }
 
@@ -50,39 +50,38 @@ function App() {
   return (
     <section className="relative h-screen flex flex-col items-center
       justify-center text-center text-white py-0 px-3">
-      <BgVideo />
       <div className="App flex flex-col video-content h-screen w-screen">
         <BrowserRouter>
-        <NavBar
-          locations={locations}
-          changeLocation={changeLocation}
-        />
-        <div  className="flex flex-col h-screen items-center gap-8">
-          <Routes>
-            <Route path="/map" element={
-              <Map
-                locations={locations}
-                currentLocation={currentLocation}
-                startingCoords={startingCoords}
-            />}
-            />
-            <Route path="/forecast/:id" element={
-              <Forecast locations={locations} />
-              }
-            />
-            <Route
-              path="/forecast"
-              element={
-                <NoSelection
+          <NavBar
+            locations={locations}
+            changeLocation={changeLocation}
+          />
+          <div  className="flex flex-col h-screen items-center gap-8">
+            <Routes>
+              <Route path="/map" element={
+                <Map
                   locations={locations}
-                  userCoordinates={startingCoords}
-                />
-              }
-            />
-            <Route path="/login" element={<Placeholder/>} />
-            <Route path="/signup" element={<Placeholder/>} />
-          </Routes>
-        </div>
+                  currentLocation={currentLocation}
+                  startingCoords={startingCoords}
+              />}
+              />
+              <Route path="/forecast/:id" element={
+                <Forecast locations={locations} />
+                }
+              />
+              <Route
+                path="/forecast"
+                element={
+                  <EmptyForecast
+                    locations={locations}
+                    userCoordinates={startingCoords}
+                  />
+                }
+              />
+              <Route path="/login" element={<Placeholder/>} />
+              <Route path="/signup" element={<Placeholder/>} />
+            </Routes>
+          </div>
         </BrowserRouter>
       </div>
       <Outlet />

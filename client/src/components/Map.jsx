@@ -19,7 +19,7 @@ function Map({locations, currentLocation, startingCoords}) {
   }
 
   return (
-    <div className="align-center md:w-1/2 md:h-3/4 w-full h-full pt-8">
+    <div className="items-center md:w-3/4 md:h-5/6 w-full h-full pt-8">
       <MapContainer
         ref={mapRef}
         attributionControl={false}
