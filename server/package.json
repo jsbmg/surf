@@ -1,9 +1,12 @@
 {
   "dependencies": {
     "axios": "^0.27.2",
+    "crypto": "^1.0.1",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "node-html-parser": "^5.3.3",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
     "pg": "^8.7.3",
     "pg-format": "^1.0.4",
     "xml-js": "^1.6.11"

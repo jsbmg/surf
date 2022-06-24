@@ -6,12 +6,14 @@ module.exports = {
   ],
   theme: {
     colors: {
-      mywhite: '#feffff',
+      transparent: 'transparent',
+      mywhite: '#fafafa',
+      white: '#ffffff',
       myblack: '#333946',
-      green: '#73b7c8',
-      red: '#f84132',
-      yellow: '#e9cd5b',
-      gray: '#e0e6db',
+      darkblue: '#171821',
+      turquoise: '#13adde',
+      neon: '#35d5ff',
+      yellow: '#FCD34D',
     },
     extend: {
       backgroundImage: {
