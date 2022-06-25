@@ -19,7 +19,7 @@ function NavBar({locations, changeLocation}) {
           className='h-12 cursor-pointer object-cover'
         />
         <h1 id="App-logo" className="text-4xl cursor-pointer font-bold">
-          Swell Signal
+          <Link to="/">Swell Signal</Link>
         </h1>
       </div>
       <div className="flex gap-8 text-lg">

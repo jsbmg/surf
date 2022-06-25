@@ -45,8 +45,18 @@ function SurfHeight({currentLocation}) {
         stackBy="y"
         yDomain={[0, maxHeight + 1]}
       >
-        <XAxis />
-        <YAxis />
+        <XAxis
+          style={{
+            ticks: {stroke: '#ffffff'},
+            marginBottom: '50px',
+            text: {stroke: 'none', fill: '#6b6b76', fontWeight: 600}}}
+        />
+        <YAxis
+          style={{
+            ticks: {stroke: '#ffffff'},
+            marginBottom: '50px',
+            text: {stroke: 'none', fill: '#6b6b76', fontWeight: 600}}}
+        />
         <VerticalBarSeries data={todayWaveMaxes} stack={true}/>
         <VerticalBarSeries data={todayWaveMins} stack={true}/>
         <VerticalBarSeries

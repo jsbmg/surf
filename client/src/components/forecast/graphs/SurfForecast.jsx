@@ -32,6 +32,11 @@ function SurfForecast({currentLocation}) {
       <XYPlot height={300} width={800} xType="ordinal">
         <XAxis
           tickTotal={0}
+          style={{
+            ticks: {stroke: '#ffffff'},
+            marginBottom: '50px',
+            text: {stroke: 'none', fill: '#6b6b76', fontWeight: 600}}}
+
           tickFormat={t => {
             if (new Date().getHours() === new Date(t).getHours()) {
               return formatDate(t);
@@ -40,9 +45,13 @@ function SurfForecast({currentLocation}) {
             }
           }}
           tickLabelAngle={-90}
-          style={{marginBottom: '50px'}}
         />
-        <YAxis />
+        <YAxis
+          style={{
+            ticks: {stroke: '#ffffff'},
+            marginBottom: '50px',
+            text: {stroke: 'none', fill: '#6b6b76', fontWeight: 600}}}
+        />
         <LineSeries data={allWaveMaxes} />
         <LineSeries data={allWaveMins} />
       </XYPlot>
